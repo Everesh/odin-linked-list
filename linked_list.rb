@@ -6,3 +6,16 @@ class Node
     @next_node = nil
   end
 end
+
+class LinkedList
+  attr_reader :head, :tail
+
+  def initialize
+    @head = nil
+    @tail = nil
+  end
+
+  private
+
+  attr_writter :head, :tail
+end
