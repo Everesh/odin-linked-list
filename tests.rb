@@ -79,6 +79,13 @@ rescue
   puts 'Either find call failed or returned the wrong value'
 end 
 
+begin
+  raise Error unless list1.to_s == '( 1 ) -> ( 2 ) -> nil'
+  raise Error unless list2.to_s == '( 2 ) -> ( 1 ) -> nil'
+rescue
+  puts 'Either to_s call failed or returned wrong value'
+end
+
 # Prepend all other test above these last two
 
 begin
