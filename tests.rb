@@ -56,3 +56,27 @@ begin
 rescue
   puts 'Either at call failed or node at at(x) is allocated wrongly'
 end
+
+
+# Prepend all other test above these last two
+
+begin
+  raise Error unless list1.pop == 2
+  raise Error unless list2.pop == 1
+rescue
+  puts "Either pop call failed or pop returned the wrong value"
+end
+
+begin
+  raise Error unless list1.pop == 1
+  raise Error unless list2.pop == 2
+rescue
+  puts "Pop call doesn't remove items correctly"
+end
+
+begin
+  raise Error unless list1.pop == nil
+  raise Error unless list2.pop == nil
+rescue
+  puts "Pop call doesn't handle empty list correctly"
+end
