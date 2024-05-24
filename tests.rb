@@ -68,6 +68,16 @@ rescue
   puts 'Either contains? call failed or misevaluated'
 end
 
+begin
+  raise Error unless list1.find(1) == 0
+  raise Error unless list1.find(2) == 1
+  raise Error unless list1.find(3) == nil
+  raise Error unless list1.find(1) == 1
+  raise Error unless list1.find(2) == 0
+  raise Error unless list1.find(3) == nil
+rescue
+  puts 'Either find call failed or returned the wrong value'
+end 
 
 # Prepend all other test above these last two
 
