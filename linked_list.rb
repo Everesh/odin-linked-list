@@ -26,6 +26,14 @@ class LinkedList
     head.nil? ? self.head = self.tail = Node.new(val) : self.head = Node.new(val, head)
   end
 
+  def at(index)
+    return nil if index > size
+
+    node = head
+    index.times { node = node.next_node }
+    node
+  end
+
   private
 
   attr_writer :head, :tail, :size
