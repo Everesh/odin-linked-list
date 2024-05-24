@@ -73,6 +73,16 @@ class LinkedList
     nil
   end
 
+  def to_s
+    string = ''
+    current = head
+    until current.nil?
+      string.concat("( #{current.value} ) -> ")
+      current = current.next_node
+    end
+    string.concat('nil')
+  end
+
   private
 
   attr_writer :head, :tail, :size
