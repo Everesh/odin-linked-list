@@ -49,10 +49,10 @@ rescue
 end
 
 begin
-  raise Error unless list1.at(0) == 1
-  raise Error unless list1.at(1) == 2
-  raise Error unless list2.at(0) == 2
-  raise Error unless list2.at(1) == 1
+  raise Error unless list1.at(0).value == 1
+  raise Error unless list1.at(1).value == 2
+  raise Error unless list2.at(0).value == 2
+  raise Error unless list2.at(1).value == 1
 rescue
   puts 'Either at call failed or node at at(x) is allocated wrongly'
 end
