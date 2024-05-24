@@ -57,6 +57,17 @@ rescue
   puts 'Either at call failed or node at at(x) is allocated wrongly'
 end
 
+begin
+  raise Error unless list1.contains?(0) == false
+  raise Error unless list1.contains?(1) == true
+  raise Error unless list1.contains?(2) == true
+  raise Error unless list2.contains?(0) == false
+  raise Error unless list2.contains?(1) == true
+  raise Error unless list1.contains?(2) == true
+rescue
+  puts 'Either contains? call failed or misevaluated'
+end
+
 
 # Prepend all other test above these last two
 
