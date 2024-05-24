@@ -34,6 +34,23 @@ class LinkedList
     node
   end
 
+  def pop
+    return nil if head.nil?
+
+    if size == 1
+      val = tail.value
+      self.tail = self.head = nil
+      self.size = 0
+      return val
+    end
+
+    val = tail.value
+    self.tail = at(size - 2)
+    tail.next_node = nil
+    self.size -= 1
+    val
+  end
+
   private
 
   attr_writer :head, :tail, :size
