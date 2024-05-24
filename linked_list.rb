@@ -25,5 +25,5 @@ class LinkedList
 
   private
 
-  attr_writter :head, :tail
+  attr_writer :head, :tail
 end
