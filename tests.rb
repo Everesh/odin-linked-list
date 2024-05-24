@@ -26,3 +26,10 @@ begin
 rescue
   puts 'Prepending to a list failed'
 end
+
+begin
+  raise Error unless list1.size == 2
+  raise Error unless list2.size == 2
+rescue
+  puts 'Either size call failed or the list size is wrong!'
+end
