@@ -51,6 +51,18 @@ class LinkedList
     val
   end
 
+  def contains?(val)
+    return false if head.nil?
+
+    checking = head
+    until checking.nil?
+      return true if checking.value == val
+
+      checking = checking.next_node
+    end
+    false
+  end
+
   private
 
   attr_writer :head, :tail, :size
