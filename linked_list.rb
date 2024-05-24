@@ -61,6 +61,18 @@ class LinkedList
     false
   end
 
+  def find(val)
+    index = 0
+    checking = head
+    until checking.nil?
+      return index if checking.value == val
+
+      checking = checking.next_node
+      index += 1
+    end
+    nil
+  end
+
   private
 
   attr_writer :head, :tail, :size
