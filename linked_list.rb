@@ -52,8 +52,6 @@ class LinkedList
   end
 
   def contains?(val)
-    return false if head.nil?
-
     checking = head
     until checking.nil?
       return true if checking.value == val
