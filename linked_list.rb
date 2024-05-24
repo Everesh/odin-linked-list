@@ -19,6 +19,10 @@ class LinkedList
     head.nil? ? self.head = self.tail = Node.new(val) : self.tail = tail.next_node = Node.new(val)
   end
 
+  def prepend(val)
+    head.nil? ? self.head = self.tail = Node.new(val) : self.head = Node.new(val, head)
+  end
+
   private
 
   attr_writter :head, :tail
