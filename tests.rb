@@ -47,4 +47,12 @@ begin
 rescue
   puts 'Either tail call failed or tail node is allocated wrongly!'
 end
-  
+
+begin
+  raise Error unless list1.at(0) == 1
+  raise Error unless list1.at(1) == 2
+  raise Error unless list2.at(0) == 2
+  raise Error unless list2.at(1) == 1
+rescue
+  puts 'Either at call failed or node at at(x) is allocated wrongly'
+end
